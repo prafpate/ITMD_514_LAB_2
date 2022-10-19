@@ -1,0 +1,190 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Arunachalam lab1.css">
+    <title>Lab1</title>
+    </head><body><div class="header">
+    <h2>ITMD 565 LAB-1 -ARUNACHALAM RAJKUMAR- arajkumar1@hawk.iit.edu</h2>
+    <h1>SALES TAX CALCULATOR</h1>
+    </div>
+
+<br>
+<br>
+
+
+    <div class="first">
+        
+    <p>Enter Subtotal and Tax Rate and click the Calculate button to show the sales tax amount and the total. Click the clear button to clear out all form fields. Tax rate should be a percentage but do not enter a % sign in the tax rate box. </p>
+    
+        <label for="subtotal">Subtotal &nbsp; &nbsp; &nbsp;</label> <input type="number" id="subtotal" name="subtotal" placeholder="Eg:123"><br><br>
+        
+        <label for="tax_rate">Tax Rate &nbsp; &nbsp; &nbsp;</label> <input type="number" id="tax_rate" name="tax rate" placeholder="Eg:123"><br><br>
+
+        <label for="sales_tax">Sales Tax &nbsp; &nbsp;</label> <input type="number" id="sales_tax" name="sales_tax" disabled=""><br><br>
+
+        <label for="total">Total &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label> <input type="number" id="total" name="total" disabled=""><br><br>
+        
+        <button id="calculate">CALCULATE TAX and TOTAL </button>&nbsp;&nbsp; 
+        <button id="clear">CLEAR</button>
+       
+    </div>
+    <br>
+    <br>
+
+      <div class="third">
+        <img style="border:10px solid black;" src="https://images-na.ssl-images-amazon.com/images/I/71zNWbTHzxL._SL1500_.jpg" width="200" height="200" class="im"></div>
+    
+    <br>
+    
+    <div class="Second">
+    <footer>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;©2020 ARUNACHALAM RAJKUMAR | arajkumar1@hawk.iit.edu</footer>
+    </div>
+    <script>
+      var $ = function(id) {
+    return document.getElementById(id);
+  }
+  var calculate_click = function(){
+    var subtotal = parseFloat($("subtotal").value);
+    var tax_rate = parseFloat($("tax_rate").value);
+    $("sales_tax").value = "";
+    $("total").value = "";
+
+   
+    
+
+  if (isNaN(subtotal) || subtotal < 0){
+    alert("Subtotal Cannot be Zero");
+  }else if(isNaN(tax_rate) || tax_rate < 0){
+    alert("Tax Rate Cannot be Zero");
+  }else{
+    var sales_tax = subtotal/100* tax_rate ;
+    sales_tax = parseFloat( sales_tax.toFixed(2) );
+    var total = subtotal + sales_tax;
+    $("sales_tax").value = sales_tax;
+    $("total").value = total.toFixed(2);
+  }
+}
+
+  window.onload = function(){
+    $("calculate").addEventListener('click',calculate_click);
+    $("clear").addEventListener('click', clears);
+
+    $("subtotal").focus();
+
+
+
+}
+var clears = function(){
+        
+            $("subtotal").value = '';
+            $("tax_rate").value = '';
+            $("sales_tax").value = '';
+            $("total").value = '' ;
+            $("subtotal").focus();
+        
+      }
+  
+    
+	
+        
+    </script>
+
+
+</body></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Arunachalam lab1.css">
+    <title>Lab1</title>
+    </head>
+
+<body><div class="header">
+    <h2>ITMD 565 LAB-1 -ARUNACHALAM RAJKUMAR- arajkumar1@hawk.iit.edu</h2>
+    <h1>SALES TAX CALCULATOR</h1>
+    </div>
+
+<br>
+<br>
+
+
+    <div class="first">
+        
+    <p>Enter Subtotal and Tax Rate and click the Calculate button to show the sales tax amount and the total. Click the clear button to clear out all form fields. Tax rate should be a percentage but do not enter a % sign in the tax rate box. </p>
+    
+        <label for="subtotal">Subtotal &nbsp; &nbsp; &nbsp;</label> <input type="number" id="subtotal" name="subtotal" placeholder="Eg:123"><br><br>
+        
+        <label for="tax_rate">Tax Rate &nbsp; &nbsp; &nbsp;</label> <input type="number" id="tax_rate" name="tax rate" placeholder="Eg:123"><br><br>
+
+        <label for="sales_tax">Sales Tax &nbsp; &nbsp;</label> <input type="number" id="sales_tax" name="sales_tax" disabled=""><br><br>
+
+        <label for="total">Total &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label> <input type="number" id="total" name="total" disabled=""><br><br>
+        
+        <button id="calculate">CALCULATE TAX and TOTAL </button>&nbsp;&nbsp; 
+        <button id="clear">CLEAR</button>
+       
+    </div>
+    <br>
+    <br>
+
+      <div class="third">
+        <img style="border:10px solid black;" src="https://images-na.ssl-images-amazon.com/images/I/71zNWbTHzxL._SL1500_.jpg" width="200" height="200" class="im"></div>
+    
+    <br>
+    
+    <div class="Second">
+    <footer>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;©2020 ARUNACHALAM RAJKUMAR | arajkumar1@hawk.iit.edu</footer>
+    </div>
+    <script>
+      var $ = function(id) {
+    return document.getElementById(id);
+  }
+  var calculate_click = function(){
+    var subtotal = parseFloat($("subtotal").value);
+    var tax_rate = parseFloat($("tax_rate").value);
+    $("sales_tax").value = "";
+    $("total").value = "";
+
+   
+    
+
+  if (isNaN(subtotal) || subtotal < 0){
+    alert("Subtotal Cannot be Zero");
+  }else if(isNaN(tax_rate) || tax_rate < 0){
+    alert("Tax Rate Cannot be Zero");
+  }else{
+    var sales_tax = subtotal/100* tax_rate ;
+    sales_tax = parseFloat( sales_tax.toFixed(2) );
+    var total = subtotal + sales_tax;
+    $("sales_tax").value = sales_tax;
+    $("total").value = total.toFixed(2);
+  }
+}
+
+  window.onload = function(){
+    $("calculate").addEventListener('click',calculate_click);
+    $("clear").addEventListener('click', clears);
+
+    $("subtotal").focus();
+
+
+
+}
+var clears = function(){
+        
+            $("subtotal").value = '';
+            $("tax_rate").value = '';
+            $("sales_tax").value = '';
+            $("total").value = '' ;
+            $("subtotal").focus();
+        
+      }
+  
+    
+	
+        
+    </script>
+
+
+</body>
