@@ -17,28 +17,24 @@
     <h2>ITMD 4/541 - Lab 3 - Prafful Patel</h2>
       <h1>TIP CALCULATOR</h1>
 
-        <label for="subtotal">Subtotal &nbsp; &nbsp; &nbsp;</label> <input type="number" id="subtotal" name="subtotal" placeholder="Eg:123"><br><br>
+        <label for="bill_total">Bill Total &nbsp; &nbsp; &nbsp;</label> <input type="number" id="bill_total" name="bill_total" placeholder="Enter the bill amount"><br><br>
         
-        <label for="tax_rate">Tax Rate &nbsp; &nbsp; &nbsp;</label> <input type="number" id="tax_rate" name="tax rate" placeholder="Eg:123"><br><br>
-
-        <label for="sales_tax">Sales Tax &nbsp; &nbsp;</label> <input type="number" id="sales_tax" name="sales_tax" disabled=""><br><br>
-
-        <label for="total">Total &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label> <input type="number" id="total" name="total" disabled=""><br><br>
         
-        <button id="calculate">CALCULATE TAX and TOTAL </button>&nbsp;&nbsp; 
+        <label for="tip_percentage">Tip Percentage &nbsp; &nbsp; &nbsp;</label> <input type="number" id="tip_percentage" name="tip_percentage" ><br><br>
+
+        <label for="tip_amount">Tip Amount &nbsp; &nbsp;</label> <input type="number" id="tip_amount" name="tip_amount" disabled=""><br><br>
+
+        <label for="total_bill">Total Bill with Tip &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label> <input type="number" id="total_bill" name="total_bill" disabled=""><br><br>
+        
+        <button id="calculate">CALCULATE TOTAL AMOUNT </button>&nbsp;&nbsp; 
         <button id="clear">CLEAR</button>
        
     </div>
     <br>
     <br>
-
-      <div class="third">
-        <img style="border:10px solid black;" src="https://images-na.ssl-images-amazon.com/images/I/71zNWbTHzxL._SL1500_.jpg" width="200" height="200" class="im"></div>
-    
     <br>
     
     <div class="Second">
-    <footer>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;©2020 ARUNACHALAM RAJKUMAR | arajkumar1@hawk.iit.edu</footer>
     </div>
     <script>
       var $ = function(id) {
@@ -83,10 +79,7 @@ var clears = function(){
             $("total").value = '' ;
             $("subtotal").focus();
         
-      }
-  
-    
-	
+      }	
         
     </script>
 
