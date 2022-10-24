@@ -48,24 +48,16 @@
     $("tip_amount").value = "";
     $("total_bill").value = "";
 
-    var tip_percentage = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = tip_percentage.value;
-
-    tip_percentage.oninput = function() {
-  output.innerHTML = this.value;
 }
 
-  if (isNaN(subtotal) || subtotal < 0){
-    alert("Subtotal Cannot be Zero");
-  }else if(isNaN(tax_rate) || tax_rate < 0){
-    alert("Tax Rate Cannot be Zero");
-  }else{
-    var sales_tax = subtotal/100* tax_rate ;
-    sales_tax = parseFloat( sales_tax.toFixed(2) );
-    var total = subtotal + sales_tax;
-    $("sales_tax").value = sales_tax;
-    $("total").value = total.toFixed(2);
+  if (isNaN(bill_total) || bill_total < 0){
+    alert("Final bill amount cannot be Zero");
+    }else{
+    var total_bill = bill_total/100* tip_percentage ;
+    tip_amount = parseFloat( tip_amount.toFixed(2) );
+    var total_bill = bill_total + tip_amount;
+    $("tip_amount").value = tip_amount;
+    $("total_bill").value = total_bill.toFixed(2);
   }
 }
 
@@ -73,18 +65,18 @@
     $("calculate").addEventListener('click',calculate_click);
     $("clear").addEventListener('click', clears);
 
-    $("subtotal").focus();
+    $("total_bill").focus();
 
 
 
 }
 var clears = function(){
         
-            $("subtotal").value = '';
-            $("tax_rate").value = '';
-            $("sales_tax").value = '';
-            $("total").value = '' ;
-            $("subtotal").focus();
+            $("bill_total").value = '';
+            $("tip_percentage").value = '';
+            $("tip_amount").value = '';
+            $("total_bill").value = '' ;
+            $("bill_total").focus();
         
       }	
     </script>
