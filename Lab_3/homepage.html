@@ -43,8 +43,8 @@
     return document.getElementById(id);
   }
   var calculate_click = function(){
-    var bill_total = parseFloat($("subtotal").value);
-    var tip_percentage = parseFloat($("tax_rate").value);
+    var bill_total = parseFloat($("bill_total").value);
+    var tip_percentage = parseFloat($("tip_percentage").value);
     $("tip_amount").value = "";
     $("total_bill").value = "";
 
@@ -53,13 +53,13 @@
   if (isNaN(bill_total) || bill_total < 0){
     alert("Final bill amount cannot be Zero");
     }else{
-    var total_bill = bill_total/100* tip_percentage ;
+    var tip_amount = bill_total*(tip_percentage / 100) ;
     tip_amount = parseFloat( tip_amount.toFixed(2) );
     var total_bill = bill_total + tip_amount;
     $("tip_amount").value = tip_amount;
     $("total_bill").value = total_bill.toFixed(2);
   }
-}
+
 
   window.onload = function(){
     $("calculate").addEventListener('click',calculate_click);
