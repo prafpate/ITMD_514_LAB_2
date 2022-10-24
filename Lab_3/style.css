@@ -12,7 +12,7 @@
  text-align: justify;
  display: inline-block;
 background-color: lightgrey;
-margin-left: 200px;
+margin-left: 750px;
 margin-right: 200px;
 padding-bottom: 70px;
 border-style: solid;
@@ -20,10 +20,13 @@ border: 15px solid rgba(189, 169, 169, 0);
 resize: both;
 
 
+
 }
 
-.button {
-    align-items: center;
+.buttons {
+    margin: auto;
+  width: 40%;
+  padding: 10px;
 }
 
 
