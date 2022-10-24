@@ -47,7 +47,16 @@
     $("tip_amount").value = "";
     $("total_bill").value = "";
 
+
     
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 
   if (isNaN(subtotal) || subtotal < 0){
     alert("Subtotal Cannot be Zero");
